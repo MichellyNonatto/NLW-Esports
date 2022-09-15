@@ -21,6 +21,7 @@ header {
 header img {
     width: 120px;
     border-radius: 50%;
+    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .sombra-perfil img {
@@ -84,19 +85,25 @@ main {
     margin-top: 24px;
 }
 
-.box li {
-    transition: transform .3s;
+.box li,
+.streamers img,
+.games img {
+    transition: linear .5s;
 }
 
 .box li:hover {
     transform: scale(1.1);
 }
 
+.streamers img:hover,
+.games img:hover {
+    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .games img {
     width: 90px;
     height: 120px;
     border-radius: 8px;
-
 }
 
 .streamers img {
@@ -105,25 +112,31 @@ main {
     border: 1px solid #443e54;
 }
 
-.box i {
-    color: #00f7ff;
+.social img {
+    width: 38px;
+}
+
+.Discord i {
+    color: #5865F2;
+    font-size: 35px;
 }
 
 .fundo {
     background-color: #2a2634;
     padding: 24px 32px;
     border-radius: 8px;
+    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 footer {
     text-align: center;
     margin-top: 20px;
     font-weight: 200;
-    animation: fromTop 1s 4.3s backwards;
+    animation: fromBottom 1s 4.3s backwards;
 }
 
 footer span {
-    color: #00f7ff;
+    color: darkslateblue;
     font-weight: 400;
 }
 
@@ -135,13 +148,14 @@ footer img {
 
 /*animation*/
 .containner {
-    animation: fromBottom 1s calc(1s + .3s) backwards;
+    animation: fromTop 1s calc(1s + .3s) backwards;
 }
 
-.containner:nth-child(2){
+.containner:nth-child(2) {
     animation-delay: 2.3s;
 }
-.containner:nth-child(3){
+
+.containner:nth-child(3) {
     animation-delay: 3.3s;
 }
 
@@ -160,11 +174,11 @@ footer img {
 @keyframes fromBottom {
     from {
         opacity: 0;
-        transform: translateX(-30px);
+        transform: translateY(30px);
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
