@@ -12,17 +12,30 @@ body {
     background-color: #121214;
 }
 
-header{
-    text-align: center;
+header {
+    padding-top: 32px;
+    animation: fromTop 1s .3s backwards;
+    height: calc(120px + 32px);
 }
 
-.sombra-perfil img{
-    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 100%);
-    padding: 4px;
+header img {
+    width: 120px;
     border-radius: 50%;
-    margin-top: 32px;
-    width: 100px;
 }
+
+.sombra-perfil img {
+    width: 120px;
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 100%);
+    display: flex;
+    padding: 4px;
+    margin: auto;
+    transition: transform .3s;
+}
+
+.sombra-perfil img:hover {
+    transform: scale(1.1);
+}
+
 
 
 main {
@@ -33,7 +46,7 @@ main {
     gap: 24px;
 }
 
-.sombra{
+.sombra {
     background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 100%);
     padding-top: 4px;
     border-radius: 10px;
@@ -41,7 +54,7 @@ main {
 }
 
 
-.imagem-circular img{
+.imagem-circular img {
     border-radius: 50%;
 }
 
@@ -66,45 +79,92 @@ main {
 }
 
 .box {
-    display: flex;    
+    display: flex;
     gap: 16px;
     margin-top: 24px;
 }
 
-.games img{
+.box li {
+    transition: transform .3s;
+}
+
+.box li:hover {
+    transform: scale(1.1);
+}
+
+.games img {
     width: 90px;
     height: 120px;
     border-radius: 8px;
+
 }
 
-.streamers img{
+.streamers img {
     width: 70px;
     height: 70px;
+    border: 1px solid #443e54;
 }
 
 .box i {
     color: #00f7ff;
 }
 
-.fundo{
+.fundo {
     background-color: #2a2634;
     padding: 24px 32px;
     border-radius: 8px;
 }
 
-footer{
+footer {
     text-align: center;
     margin-top: 20px;
     font-weight: 200;
+    animation: fromTop 1s 4.3s backwards;
 }
 
-footer span{
+footer span {
     color: #00f7ff;
     font-weight: 400;
 }
 
-footer img{
+footer img {
     margin: 15px 0;
     width: 10%;
     opacity: 50%;
+}
+
+/*animation*/
+.containner {
+    animation: fromBottom 1s calc(1s + .3s) backwards;
+}
+
+.containner:nth-child(2){
+    animation-delay: 2.3s;
+}
+.containner:nth-child(3){
+    animation-delay: 3.3s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
