@@ -12,9 +12,11 @@ body {
     background-color: #121214;
 }
 
+.animacao{
+    animation: fromTop 1s .3s backwards;
+}
 header {
     padding-top: 32px;
-    animation: fromTop 1s .3s backwards;
     height: calc(120px + 32px);
 }
 
@@ -22,6 +24,28 @@ header img {
     width: 120px;
     border-radius: 50%;
     box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header nav {
+    margin: 0em .5em;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 16px;
+    font-weight: 600;
+    color: #a1a1aa;
+    transition: ease .5s;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+header nav ul li:hover {
+    font-size: 17px;
+    color: darkslateblue;
+    text-decoration: underline;
 }
 
 .sombra-perfil img {
@@ -40,7 +64,7 @@ header img {
 
 
 main {
-    max-width: 580px;
+    max-width: 100%;
     width: 90%;
     margin: auto;
     display: grid;
@@ -61,6 +85,8 @@ main {
 
 .containner {
     line-height: 160%;
+    width: 65%;
+    margin: 0 auto;
 }
 
 .containner h2 {
@@ -96,13 +122,15 @@ main {
 }
 
 .streamers img:hover,
-.games img:hover {
+.games img:hover,
+.image img:hover {
     box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.games img {
-    width: 90px;
-    height: 120px;
+.games img,
+.image img {
+    width: auto;
+    height: 150px;
     border-radius: 8px;
 }
 
@@ -181,4 +209,4 @@ footer img {
         opacity: 1;
         transform: translateY(0);
     }
-}
+} 
