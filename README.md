@@ -1,7 +1,7 @@
 <div align="center">
   <h1> NLW eSports <img width="25px" src="https://blog.rocketseat.com.br/content/images/2020/08/favicon-512.png" title="Rocketseat"> | Explorer</h1>
   <p>Site feito para o desafio da plataforma Rocketseat</p>
-  <a href="https://michellynonatto.github.io/NLW-Esports/">🔗 Site NLW eSports</a>
+  <a href="https://michellynonatto.github.io/NLW-eSports-Explorer/">🔗 Site NLW eSports</a>
   <br>
   <h2>😎 Minha experiência</h2>
   
